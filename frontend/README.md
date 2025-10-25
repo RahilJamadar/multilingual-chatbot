@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📦 multilingual-chatbot
 
-## Available Scripts
+A multilingual AI chatbot with voice input, text-to-speech, and persistent chat history — supporting English, Hindi, and Marathi. Built with React and Node.js, this project enables spoken and typed conversations with a cinematic, professional UI.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎙️ Voice input via browser (Web Speech API)  
+- 🧠 AI chatbot replies using OpenRouter API  
+- 🔊 Text-to-speech with stop control  
+- 💾 Persistent chat history via localStorage  
+- 🌐 Language selector (English, Hindi, Marathi)  
+- 📋 Chat utilities: Clear, Share, Copy, Download  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React, Bootstrap, Web Speech API, SpeechSynthesis  
+- **Backend**: Node.js, Express  
+- **AI API**: OpenRouter (GPT-based models)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+multilingual-chatbot/
+├── backend/
+│   └── server.js
+├── frontend/
+│   ├── src/
+│   │   ├── ChatBot.js
+│   │   └── ChatBot.css
+│   └── public/
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧑‍💻 How to Run Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔹 1. Clone the Repo
+```bash
+git clone https://github.com/RahilJamadar/multilingual-chatbot.git
+cd multilingual-chatbot
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🔹 2. Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Backend
+```bash
+cd backend
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Frontend
+```bash
+cd ../frontend
+npm install
+```
 
-## Learn More
+### 🔹 3. Set API Key
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In `server.js`, replace:
+```js
+const OPENROUTER_API_KEY = "your-openrouter-key";
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Get your key from [https://openrouter.ai](https://openrouter.ai)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🔹 4. Start Backend
+```bash
+cd backend
+node server.js
+```
 
-### Analyzing the Bundle Size
+### 🔹 5. Start Frontend
+```bash
+cd ../frontend
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+App runs at: [http://localhost:3000](http://localhost:3000)  
+Backend runs at: [http://localhost:5000](http://localhost:5000)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🌐 Deployment Tips
 
-### Advanced Configuration
+- Host frontend on GitHub Pages, Vercel, or Netlify  
+- Host backend on Render, Railway, or Fly.io  
+- Use HTTPS endpoints in production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+MIT — feel free to fork, remix, and build on it.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
